@@ -1,4 +1,11 @@
+#if defined(__APPLE__) || defined(__MACOSX)
+#include <OpenCL/opencl.h>
+#define CL_USE_DEPRECATED_OPENCL_2_0_APIS
+#define OLD_VERSION
+#else
 #include <CL/cl.h>
+#endif
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -90,7 +97,11 @@ int main(int argc, char const* argv[])
   checkError(err, "alloc");
 
   //craete command queue
+#ifdef OLD_VERSION
+  cl_command_queue queue = clCreateCommandQueue(ctx, device[d_cel], 0, &err);
+#else
   cl_command_queue queue = clCreateCommandQueueWithProperties(ctx, device[d_cel], NULL, &err);
+#endif
   checkError(err, "command queue");
 
   //enqueue the write buffer commands

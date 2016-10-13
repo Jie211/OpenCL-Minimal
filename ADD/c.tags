@@ -1,0 +1,9 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/e3c977b/
+CL_USE_DEPRECATED_OPENCL_2_0_APIS	add2.c	/^#define CL_USE_DEPRECATED_OPENCL_2_0_APIS$/;"	d	file:
+main	add2.c	/^int main(int argc, char const* argv[])$/;"	f	typeref:typename:int
+OLD_VERSION	add2.c	/^#define OLD_VERSION$/;"	d	file:
